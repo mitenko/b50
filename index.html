@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Book of 50</title>
+
+<!-- ============================================================== -->
+<!--  EDIT ONE LINE BELOW to point the socks' QR at the audio file.  -->
+<!--  The QR itself never changes - only this destination does.      -->
+<!-- ============================================================== -->
+<script>
+  var DESTINATION = "https://example.com/REPLACE-WITH-AUDIO-LINK";
+
+  // Until you set a real link, the page shows a friendly holding message
+  // instead of redirecting to the placeholder.
+  var READY = DESTINATION.indexOf("REPLACE-WITH") === -1;
+  if (READY) { window.location.replace(DESTINATION); }
+</script>
+
+<style>
+  html,body{height:100%;margin:0}
+  body{
+    font-family:Georgia,"Times New Roman",serif;
+    background:#1d1b16;color:#f3ead6;
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:24px;
+  }
+  main{max-width:30rem}
+  h1{font-size:2rem;margin:0 0 .6rem;letter-spacing:.02em}
+  p{font-size:1.1rem;line-height:1.5;opacity:.9;margin:.4rem 0}
+  a{color:#e8c87a;font-weight:bold}
+</style>
+</head>
+<body>
+  <main>
+    <h1>≡ƒÄü The Book of 50</h1>
+    <p id="msg">Taking you to your next chapter&hellip;</p>
+    <p id="fallback" style="display:none"></p>
+  </main>
+
+  <script>
+    if (READY) {
+      // JS-redirect already fired; offer a manual link just in case.
+      var f = document.getElementById('fallback');
+      f.style.display = 'block';
+      f.innerHTML = 'Not moving? <a href="' + DESTINATION + '">Tap here.</a>';
+    } else {
+      document.getElementById('msg').textContent = 'Almost ready ΓÇö check back soon. Γ£¿';
+    }
+  </script>
+</body>
+</html>
